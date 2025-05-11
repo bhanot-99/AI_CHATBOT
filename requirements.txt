@@ -1,7 +1,0 @@
-streamlit
-langchain
-chromadb
-pypdf
-sentence-transformers
-ollama
-langchain-community
