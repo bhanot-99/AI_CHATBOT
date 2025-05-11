@@ -9,8 +9,15 @@ from utils.document_processing import process_text, process_pdf
 load_dotenv()
 
 # Configure Gemini
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-pro')
+genai.configure(api_key=os.getenv("AIzaSyDpqTgf3rhDZ9vzoNaZIHqUlXa0Ew7gELI"))
+model = genai.GenerativeModel('gemini-1.5-pro-latest') 
+
+# TEMPORARY: List available models (remove after checking)
+print("Available Gemini models:")
+for m in genai.list_models():
+    if 'generateContent' in m.supported_generation_methods:
+        print(f" - {m.name}")
+
 
 # Initialize Vector Database
 vector_db = VectorDB()
