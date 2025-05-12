@@ -1,25 +1,56 @@
-# Kazakhstan Constitution AI Assistant
+🇰🇿 Kazakhstan Constitution AI Assistant
+An AI-powered assistant that answers questions about the Constitution of Kazakhstan using locally hosted language models via Ollama. The application features a user-friendly interface built with Streamlit and utilizes ChromaDB for efficient document retrieval.
 
-An AI assistant that answers questions about the Constitution of Kazakhstan using Gemini.
+🧠 Features
+Local LLM Integration: Run language models like LLaMA, Mistral, or Phi locally using Ollama.
 
-## Features
+Document Upload: Upload PDF or TXT files containing the Constitution or related documents.
 
-- Chat interface powered by Streamlit
-- Document upload (PDF/TXT) functionality
-- Vector database (ChromaDB) for document storage
-- Context-aware responses using Gemini
+Vector Database: Store and retrieve document embeddings using ChromaDB.
 
-## Usage
+Context-Aware Responses: Generate answers based on the uploaded documents.
 
-1. Install requirements: `pip install -r requirements.txt`
-2. Set up your Gemini API key in `.env` file
-3. Run the app: `streamlit run app.py`
+Interactive UI: Engage with the assistant through a Streamlit-powered web interface.
 
-## Examples
+Clone the Repository
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+git clone https://github.com/bhanot-99/AI_CHATBOT.git
+cd AI_CHATBOT
 
-## License
+2. Install Dependencies
+Ensure you have Python 3.8 or higher installed. Then, create a virtual environment and install the required packages:
 
-MIT License
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+3. Install and Set Up Ollama
+Follow the instructions on the Ollama website to install and configure Ollama on your system. Once installed, download the desired language model. For example:
+
+ollama pull llama2
+Replace llama2 with the model of your choice.
+
+4. Configure Environment Variables
+Create a .env file in the project root directory and add any necessary environment variables. For example:
+
+OLLAMA_MODEL=llama2
+Ensure that the model name matches the one you downloaded with Ollama.
+
+💻 Running the Application
+Start the Streamlit application:
+
+streamlit run app.py
+This will launch the web interface in your default browser. From there, you can upload documents and interact with the AI assistant.
+
+
+📁 Project Structure
+
+AI_CHATBOT/
+├── app.py                 # Main Streamlit application
+├── documents/             # Directory to store uploaded documents
+├── utils/                 # Utility functions and modules
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
+
+📝 License
+This project is licensed under the MIT License. See the LICENSE file for details.
