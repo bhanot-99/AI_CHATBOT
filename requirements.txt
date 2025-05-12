@@ -1,7 +1,7 @@
-google-generativeai
 streamlit
 chromadb
 langchain
-python-dotenv
-pypdf
+ollama
 tiktoken
+pypdf==3.17.0
+python-dotenv==1.0.0
