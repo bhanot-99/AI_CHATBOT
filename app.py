@@ -21,6 +21,7 @@ llm = Ollama(
 # Initialize Vector Database
 vector_db = VectorDB()
 
+
 def generate_response(query, context):
     """
     Improved response generation with better context handling
@@ -125,6 +126,9 @@ def main():
             st.markdown(response)
         
         st.session_state.messages.append({"role": "assistant", "content": response})
+        
+        # Save Q&A to MongoDB vector store
+        vector_db.save_qa_pair(prompt, response, context)
 
 if __name__ == "__main__":
     main()

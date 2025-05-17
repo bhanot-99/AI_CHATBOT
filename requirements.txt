@@ -5,3 +5,5 @@ ollama
 tiktoken
 pypdf==3.17.0
 python-dotenv==1.0.0
+pymongo 
+sentence-transformers
